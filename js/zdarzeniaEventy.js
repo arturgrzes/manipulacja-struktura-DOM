@@ -1,17 +1,12 @@
 'use script'
+//efekt powiekszania napisu po najechaniu
+var mainHeader = document.getElementById('main-header');
+//przypisujemy nagłówek strony do zmiennej
 
-
-var secondLink = document.getElementsByTagName('a')[1];
-//tworzymy zmienną z drugim linkiem
-
-console.log(secondLink);
-
-
-function alarm(event) {
-   event.preventDefault(); //zapobiegamy domyślnej akcji
-    console.log('kliknięto kolejny link');
-    console.log(event);
+function resize(e) {
+    console.log(e.type);
 }
-    
-    
-    secondLink.onclick = alarm; //wywołujemy funkcję alarm na drugim linku po kliknięciu
+
+
+mainHeader.onmouseover = resize; //wywołanie funkcji resize po najechaniu myszką na nagłówek
+mainHeader.onmouseout = resize;  //wywołanie funkcji resize po zjechaniu myszką z nagłóweka
