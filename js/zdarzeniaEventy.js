@@ -28,6 +28,7 @@ function klikHeader(){
 document.getElementsByTagName('header')[0].onclick = klikHeader;
 
 function klikH1(e) {
+    e.stopPropagation();
     console.log("kliknąłeś w h1");
 }
 
